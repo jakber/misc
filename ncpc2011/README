@@ -1,0 +1,19 @@
+NCPC 2011 Files
+
+Contains source from my machine at http://ncpc.idi.ntnu.no/ncpc2011/
+
+A, C, D, E, F, G were accepted during the competition.
+
+A - Robots.java
+B - MegaInversions.java (doesn't work)
+C - Deathknight.java
+D - Elevator.java
+E - Ls.java
+F - Moose.java
+G - CarTrouble.java
+I - PrimeTime.java (doesn't work)
+
+Problem descriptions - ncpc2011problems.pdf
+Solution slides - ncpc2011slides.pdf
+Sample data - ncpc2011sample
+Judges' data - ncpc2011ball
