@@ -1,6 +1,9 @@
 #import <stdio.h>
 
+
+// Found this code, and two variations of the problem online. This program solves neither.
 // http://c2.com/cgi/wiki?OddWordProblem
+// http://rosettacode.org/wiki/Odd_word_problem
 
 int main() {
 	while (1) {
