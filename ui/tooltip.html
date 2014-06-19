@@ -1,0 +1,92 @@
+<style>
+.tooltip {width: 20px; height:20px; background-color:red;}
+.tooltip p {position:relative; top:0px; width:300px; font-size:120%; visibility:hidden;left:-9999px;background-color:#ffc; padding:5px; border-radius:3px;margin:0;}
+.tooltip:hover p {visibility:visible;}
+.tooltip p.left {left:-320px;}
+.tooltip p.right {left:30px;}
+.tooltip p:before {
+   content:"";
+   position: absolute;
+   top: 7px;
+   width: 0;
+   height: 0;
+   border-top: 5px solid transparent;
+   border-bottom: 5px solid transparent;
+}
+.tooltip p.right:before {
+   right: 100%;
+   border-right: 10px solid #ffc;
+}
+.tooltip p.left:before {
+   left: 100%;
+   border-left: 10px solid #ffc;
+}
+
+</style>
+
+<div class="tooltip" style="margin-left:0px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:100px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:200px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:300px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:400px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:500px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:600px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:700px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:800px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:900px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1000px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1100px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1200px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1300px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1400px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1500px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1600px">
+<p>tooltip text</p>
+</div>
+<div class="tooltip" style="margin-left:1700px">
+<p>tooltip text</p>
+</div>
+<script type="text/javascript" src="jquery-1.8.2.js"></script>
+<script>
+$(".tooltip p").each(function(i, el) {
+	var $el = $(el)
+	if ($(el.parentNode).offset().left + $el.outerWidth() + 30 >= $(document).width())
+		$el.addClass("left")
+	else
+		$el.addClass("right")
+	console.log($(el.parentNode).offset().left, $el.offset().left, $el.outerWidth(), $(document).width())
+	console.log(el.className);
+});
+</script>

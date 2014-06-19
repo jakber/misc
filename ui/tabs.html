@@ -1,0 +1,14 @@
+<style>
+form {padding:0 15px;}
+body {font-family:'Open Sans';}
+input {display: none;}
+input+label+div {display:none; position:absolute; left:10px;top:41px;right:10px;}
+label {display:inline-block; padding: 5px 20px; border:1px solid black; margin:0;background-color:#ddd; border-radius:5px 5px 0px 0px;}
+input:checked+label {border-bottom:1px solid white;background-color:#fff;}
+input:checked+label+div {display:block;}
+div {border:1px solid black;z-index:-1;min-height:300px;padding:10px;}
+</style>
+<form>
+   <input type="radio" name="tab" id="home" checked><label for="home">Home</label><div>home home home</div>
+   <input type="radio" name="tab" id="away"><label for="away">Away</label><div>away away away</div>
+</form>
