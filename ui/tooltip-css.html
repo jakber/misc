@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv"><head><title>CSS tooltip tests</title>
+<style type="text/css">
+body {font-family: 'Helvetica Neue';}
+div {
+	background-color:#ccc; 
+	white-space:nowrap;
+}
+td { max-width: 200px; }
+.shorten {
+	padding:0px 5px;
+	display: block;
+	width: auto;
+}
+div.popup {
+	display:inline-block;
+	background-color: #fff;
+	margin-left:10px;
+	position:absolute; 
+	padding: 100px; 
+	border-radius:3px; 
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	visibility: hidden;
+}
+
+div.popup-material {
+	background-color:transparent;
+	display: inline-block;
+	position:absolute; 
+	margin-left:10px;
+	padding-top:100px;
+	transition:All 0.1s ease;
+}
+div.popup-material>div {
+	background-color: #fff;
+	padding: 100px; 
+	border-radius:3px; 
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height:0px; padding-top:0px; padding-bottom:0px; overflow:hidden;
+	transition:All 0.1s ease;
+}
+
+input:focus+div.popup {visibility: visible; }
+a.hover:hover+div.popup {visibility: visible; }
+div:hover>div.hover-parent {visibility: visible;}
+.click:focus+div.popup {visibility: visible;}
+div:hover>div.popup-material.hover-parent {visibility: visible; padding-top:0px;}
+div:hover>div.popup-material.hover-parent>div {visibility: visible; height:auto; padding-top:100px;padding-bottom:100px;}
+
+</style>
+<link rel="styleheet" href="http://manager.videoplaza-feature2.tv/karbon/master.css">
+</head><body>
+<h1>popups/tooltips</h1>
+<div style="background-color:#fff;">
+	<input value="focus">
+	<div class="popup">POPUP on FOCUS!</div>
+</div>
+<div style="background-color:#fff; margin: 50px 0;">
+	<a class="hover">hover</a>
+	<div class="popup">POPUP on HOVER!</div>
+</div>
+<div style="background-color:#fff;margin: 50px 0;">
+	hover (entire div)
+	<div class="popup hover-parent">POPUP on HOVER!</div>
+</div>
+<div style="background-color:#fff;margin: 50px 0;">
+	<label class="click" href="javascript:void(0);">click<input style="position:absolute;left:-9999px;">
+	<div class="popup">POPUP on CLICK</div></label>
+</div>
+<div style="background-color:#fff;margin: 50px 0;">
+	hover (with material design style-transition)
+	<div class="popup-material hover-parent"><div>POPUP on CLICK</div></div></label>
+</div>
+
+</body>
+</html>
